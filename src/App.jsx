@@ -34,13 +34,13 @@ export default function App() {
       setIsReady(false); // Tạm ẩn book để reset hoàn toàn
       const winW = window.innerWidth;
       const winH = window.innerHeight;
-      
+
       if (winW < 768) {
         setDimensions({ width: winW * 0.9, height: winH * 0.7, isMobile: true });
       } else {
         setDimensions({ width: 450, height: 600, isMobile: false });
       }
-      
+
       // Delay nhỏ để React dọn dẹp DOM cũ trước khi render lại Book mới
       setTimeout(() => setIsReady(true), 50);
     };
@@ -71,7 +71,7 @@ export default function App() {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[#2c4c3b] p-4 overflow-hidden">
-      
+
       {/* Nút điều khiển Mobile */}
 
 
@@ -101,7 +101,33 @@ export default function App() {
           </Page>
 
           {/* TRANG 2: TRANG TRỐNG ĐẦU */}
-          <Page />
+          <Page className="p-6 md:p-10 flex flex-col justify-center bg-[#fdfaf3] relative">
+            {/* Hiệu ứng lề giấy kẻ ngang cho giống thư tay */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none"
+              style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px)', backgroundSize: '100% 2rem' }}></div>
+
+            <div className="relative z-10">
+              <h2 className="text-xl md:text-2xl font-serif font-bold text-amber-900 mb-4 md:mb-6 flex items-center gap-2">
+                Bon bon ti ti bi bo <Heart size={18} className="fill-amber-900" />
+              </h2>
+
+              <div className="space-y-4 text-sm md:text-base text-amber-800 leading-relaxed font-serif italic">
+                <p>I’m sorry for giving you the gift a bit late. Honestly, I’m not really used to giving gifts to someone, so I spent a lot of time thinking about what I should give you all.</p>
+
+                <p>When I read what everyone wrote, I was truly touched. So touched that I didn’t even know what to say. The night before everyone left, I kept thinking about what I could do to make the gift meaningful.</p>
+
+                <p>In the end, I decided to use my own strengths to create something, as a little memory for all of us. So that in the future, whenever you feel sad, bored, or lonely, looking at this album might at least make you feel a little better.</p>
+
+                <p className="font-semibold">I hope you all like this gift.</p>
+                <p>And I hope one day soon, all of <span className="text-orange-700">Bon bon ti ti bi bo</span> can gather together again in Vietnam.</p>
+              </div>
+
+              <div className="mt-8 md:mt-10 text-right">
+                <p className="text-amber-900 font-serif">With lots of love 🤍</p>
+                <p className="text-amber-900 font-serif text-sm mt-2">Thank you for being part of this journey.</p>
+              </div>
+            </div>
+          </Page>
 
           {/* CÁC TRANG NỘI DUNG */}
           {finalPages.groups.map((images, idx) => (
@@ -123,7 +149,7 @@ export default function App() {
           <Page className="bg-amber-500 border-none">
             <div className="w-full h-full flex flex-col items-center justify-center text-white p-8">
               <Heart className="w-12 h-12 mb-4 fill-white" />
-              <h2 className="text-xl italic font-serif"> "This book may close here,<br/>but our story does not."</h2>
+              <h2 className="text-xl italic font-serif"> "This book may close here,<br />but our story does not."</h2>
               <div className="mt-6 flex gap-2">
                 <img src={lastPage1} className="w-16 h-16 rounded-full border-2 border-white -rotate-6" />
                 <img src={lastPage2} className="w-16 h-16 rounded-full border-2 border-white rotate-6" />
