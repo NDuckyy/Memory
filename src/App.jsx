@@ -100,31 +100,34 @@ export default function App() {
             </div>
           </Page>
 
-          {/* TRANG 2: TRANG TRỐNG ĐẦU */}
-          <Page className="p-6 md:p-10 flex flex-col justify-center bg-[#fdfaf3] relative">
+          {/* TRANG 2: THƯ TAY ( MESSAGE PAGE ) */}
+          <Page className="p-4 md:p-8 flex flex-col justify-center bg-[#fdfaf3] border-l border-amber-200 relative">
             {/* Hiệu ứng lề giấy kẻ ngang cho giống thư tay */}
             <div className="absolute inset-0 opacity-10 pointer-events-none"
-              style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px)', backgroundSize: '100% 2rem' }}></div>
+              style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px)', backgroundSize: '100% 1.8rem' }}></div>
 
-            <div className="relative z-10">
-              <h2 className="text-xl md:text-2xl font-serif font-bold text-amber-900 mb-4 md:mb-6 flex items-center gap-2">
-                Bon bon ti ti bi bo <Heart size={18} className="fill-amber-900" />
+            {/* Khối nội dung chính, có scroll khi cần thiết cho điện thoại ngắn */}
+            <div className="relative z-10 overflow-y-auto max-h-full space-y-3 pb-6 md:pb-8">
+              <h2 className="text-xl md:text-2xl font-serif font-bold text-amber-900 flex items-center gap-1.5">
+                Bon bon ti ti bi bo <Heart size={16} className="fill-amber-900" />
               </h2>
 
-              <div className="space-y-4 text-sm md:text-base text-amber-800 leading-relaxed font-serif italic">
+              {/* text-sm md:text-base giúp chữ tự động thu nhỏ trên điện thoại */}
+              <div className="text-sm md:text-base text-amber-800 leading-relaxed font-serif italic space-y-3">
                 <p>I’m sorry for giving you the gift a bit late. Honestly, I’m not really used to giving gifts to someone, so I spent a lot of time thinking about what I should give you all.</p>
 
                 <p>When I read what everyone wrote, I was truly touched. So touched that I didn’t even know what to say. The night before everyone left, I kept thinking about what I could do to make the gift meaningful.</p>
 
                 <p>In the end, I decided to use my own strengths to create something, as a little memory for all of us. So that in the future, whenever you feel sad, bored, or lonely, looking at this album might at least make you feel a little better.</p>
 
-                <p className="font-semibold">I hope you all like this gift.</p>
+                <p className="font-semibold text-amber-950">I hope you all like this gift.</p>
+
                 <p>And I hope one day soon, all of <span className="text-orange-700">Bon bon ti ti bi bo</span> can gather together again in Vietnam.</p>
               </div>
 
-              <div className="mt-8 md:mt-10 text-right">
-                <p className="text-amber-900 font-serif">With lots of love 🤍</p>
-                <p className="text-amber-900 font-serif text-sm mt-2">Thank you for being part of this journey.</p>
+              {/* Di chuyển With lots of love vào bên trong để chắc chắn nó không bị tràn */}
+              <div className="mt-6 md:mt-8 text-right pr-2">
+                <p className="text-sm md:text-base text-amber-900 font-serif font-medium">With lots of love 🤍</p>
               </div>
             </div>
           </Page>
