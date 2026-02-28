@@ -22,7 +22,7 @@ export default function App() {
 
       if (screenWidth < 768) {
         const width = screenWidth - 20;
-        const height = width * 0.75; // giữ tỉ lệ 4:3
+        const height = width * 0.85; // giữ tỉ lệ 4:3
         setBookSize({ width, height });
       } else {
         setBookSize({ width: 720, height: 550 });
