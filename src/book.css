@@ -1,0 +1,77 @@
+body {
+  background: #f3efe7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Wrapper */
+.book-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Gáy sách */
+.book-spine {
+  width: 40px;
+  height: 550px;
+  background: linear-gradient(
+    to right,
+    #8b5e3c,
+    #a67c52,
+    #8b5e3c
+  );
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 0 0 5px;
+  box-shadow: inset -3px 0 5px rgba(0,0,0,0.3);
+}
+
+/* Book */
+.book {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Pages */
+.page {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cover */
+.cover {
+  background: linear-gradient(
+    135deg,
+    #2c7a7b,
+    #285e61
+  );
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.front-cover {
+  border-radius: 0 10px 10px 0;
+}
+
+.back-cover {
+  border-radius: 10px 0 0 10px;
+}
