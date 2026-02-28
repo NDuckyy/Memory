@@ -73,12 +73,7 @@ export default function App() {
     <div className="fixed inset-0 flex items-center justify-center bg-[#2c4c3b] p-4 overflow-hidden">
       
       {/* Nút điều khiển Mobile */}
-      <button 
-        onClick={() => bookRef.current?.pageFlip().prev()}
-        className="absolute left-2 z-50 p-3 bg-white/20 rounded-full text-white md:hidden active:scale-95"
-      >
-        <ChevronLeft size={24} />
-      </button>
+
 
       <div className="relative shadow-[0_30px_60px_rgba(0,0,0,0.6)]">
         <HTMLFlipBook
@@ -137,13 +132,6 @@ export default function App() {
           </Page>
         </HTMLFlipBook>
       </div>
-
-      <button 
-        onClick={() => bookRef.current?.pageFlip().next()}
-        className="absolute right-2 z-50 p-3 bg-white/20 rounded-full text-white md:hidden active:scale-95"
-      >
-        <ChevronRight size={24} />
-      </button>
     </div>
   );
 }
