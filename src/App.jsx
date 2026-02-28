@@ -95,7 +95,7 @@ export default function App() {
           <Page className="bg-gradient-to-br from-amber-300 to-orange-400 p-0 overflow-hidden">
             <div className="w-full h-full flex flex-col items-center justify-center p-6 border-r-8 border-black/10">
               <h1 className="text-2xl md:text-4xl font-serif text-amber-900 mb-6 text-center font-bold">Memory Book</h1>
-              <img src={coverImg} className="w-48 md:w-64 h-64 md:h-80 object-cover rounded shadow-2xl border-4 border-white" />
+              <img src={coverImg} className="w-68 md:w-84 h-64 md:h-80 object-cover rounded shadow-2xl border-4 border-white" />
               <p className="mt-8 text-amber-900/60 text-sm italic animate-pulse">Flip to open the book</p>
             </div>
           </Page>
